@@ -1,0 +1,16 @@
+{
+  "name": "samhoud/eventbrite-api",
+  "description": "Eventbrite API integration plugin for OctoberCMS",
+  "homepage": "http://octobercms.com",
+  "keywords": ["october", "cms", "eventbrite", "api"],
+  "authors": [
+    {
+      "name": "Bas van Vliet",
+      "email": "b.vliet@samhoud.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.4.0",
+    "guzzlehttp/guzzle": "~6.0"
+  }
+}

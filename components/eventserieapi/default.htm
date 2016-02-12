@@ -1,0 +1,13 @@
+
+
+{% for event in serieEvents %}
+    <li>
+        {# Line below converts the date of the event to readable string, then the start time of event and end time of event:
+            Example: 22-02 19:00 - 19:30
+        #}
+        {{__SELF__.convertDate(event)}} {{__SELF__.convertToTime(event.start)}} - {{__SELF__.convertToTime(event.end)}}
+        <a href="{{event.url}}">Buy tickets (external)</a>
+        <-  ->
+        <a href="{{ 'event'|page({ eventID: event.id }) }}/">Buy tickets (iframe)</a>
+    </li>
+{% endfor %}

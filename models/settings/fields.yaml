@@ -1,0 +1,7 @@
+fields:
+    api_key:
+        span: left
+        label: API Key
+    api_url:
+        span: right
+        label: API URL

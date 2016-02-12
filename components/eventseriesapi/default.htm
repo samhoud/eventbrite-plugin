@@ -1,0 +1,34 @@
+<div id="posts" class="post-grid grid-3 clearfix">
+    {% for serie in series %}
+    <div class="entry clearfix">
+        <div class="entry-image">
+            <div class="fslider" data-arrows="false" >
+                <div class="flexslider">
+                    <div class="slider-wrap">
+                        <div class="slide"><a href="{{ 'serie'|page({ serieID: serie.series_id }) }}" data-lightbox="gallery-item"><img class="image_fade" src="{{ 'assets/images/about.jpg'|theme }}" alt="{{ serie.name.text }}"></a></div>
+                        <div class="slide"><a href="{{ 'serie'|page({ serieID: serie.series_id }) }}" data-lightbox="gallery-item"><img class="image_fade" src="{{ 'assets/images/about.jpg'|theme }}" alt="{{ serie.name.text }}"></a></div>
+                        <div class="slide"><a href="{{ 'serie'|page({ serieID: serie.series_id }) }}" data-lightbox="gallery-item"><img class="image_fade" src="{{ 'assets/images/about.jpg'|theme }}" alt="{{ serie.name.text }}"></a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="entry-title">
+            <h2><a href="#">{{ serie.name.text }}</a></h2>
+        </div>
+
+        <div class="entry-content">
+            <p>{{ serie.description.text }}</p>
+            <a href="{{ 'serie'|page({ serieID: serie.series_id }) }}" class="more-link">Read More</a>
+        </div>
+    </div>
+    {% endfor %}
+
+    {# simple version #}
+    <ul>
+    {% for serie in series %}
+        <li>
+            <a href="{{ 'serie'|page({ serieID: serie.series_id }) }}">{{ serie.name.text }}</a>
+        </li>
+    {% endfor %}
+    </ul>
+</div>
